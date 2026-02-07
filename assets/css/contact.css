@@ -1,0 +1,93 @@
+.address {
+    background: var(--color-gray-100);
+    padding: var(--spacing-lg) 0;
+}
+
+.address-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: stretch;
+}
+
+/* Left aligned section header */
+.section-header.left {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+/* Address Cards */
+.address-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+.address-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 1.5rem 1.6rem;
+    border: 1px solid rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+}
+
+.address-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+}
+
+.address-card h4 {
+    font-size: 1.15rem;
+    color: var(--color-navy);
+    margin-bottom: 0.6rem;
+}
+
+.address-card p {
+    font-size: 0.92rem;
+    color: var(--color-gray-800);
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.address-card.subtle {
+    background: linear-gradient(135deg, #f6f8fb, #ffffff);
+}
+
+.address-card span {
+    opacity: 0.75;
+    font-size: 0.85rem;
+}
+
+/* CIN */
+.company-meta {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--color-gray-700);
+}
+
+/* Map */
+.map-container {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    border: none;
+    filter: grayscale(10%) contrast(1.05);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .address-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .map-container iframe {
+        min-height: 360px;
+    }
+}
