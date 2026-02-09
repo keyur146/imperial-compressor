@@ -142,7 +142,7 @@
 
 .why-imperial-products {
     background: #ffffff;
-    padding: clamp(4rem, 6vw, 6rem) 0;
+    padding: var(--spacing-lg) 0;
 }
 
 .section-header.center {

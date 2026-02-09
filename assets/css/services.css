@@ -302,20 +302,43 @@
 }
 
 .coverage-row {
+    margin-bottom: 1rem;
+}
+
+.coverage-label {
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: var(--color-navy);
+}
+
+.city-list {
     display: flex;
-    gap: var(--spacing-sm);
-    margin-bottom: var(--spacing-sm);
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
-.coverage-row i {
+.city-badge {
+    padding: 0.4rem 0.75rem;
+    background: #fff6ee;
     color: var(--color-primary);
-    margin-top: 4px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 1px solid var(--color-primary);
 }
 
-.coverage-row p {
-    margin: 0;
-    font-size: 0.95rem;
-    color: var(--color-gray-700);
+/* partner highlight */
+.city-badge.partner {
+    background: #fff4e5;
+    color: #784800;
+    border-color: #784800;
+}
+
+/* international highlight */
+.city-badge.intl {
+    background: #e6f7f1;
+    color: #00533b;
+    border-color: #00533b;
 }
 
 

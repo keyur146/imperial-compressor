@@ -2093,6 +2093,7 @@ body.menu-open {
     color: var(--color-gray-700);
     margin-top: 0.5rem;
     display: block;
+    word-break: break-word;
 }
 
 .btn-submit {
@@ -2119,6 +2120,7 @@ body.menu-open {
     stroke-dasharray: 50;
     stroke-dashoffset: 25;
 }
+
 
 @keyframes spin {
     to {
