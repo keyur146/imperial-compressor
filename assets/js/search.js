@@ -8,38 +8,38 @@ const searchResults = document.getElementById('searchResults');
 // Search data - products and pages
 const searchData = {
     products: [
-        { title: 'Atlas Copco Replacement Spares', url: '/replacement-spares/atlas-copco.html', description: 'Genuine quality replacement parts for Atlas Copco compressors' },
-        { title: 'Chicago Pneumatic Replacement Spares', url: '/replacement-spares/chicago-pneumatic.html', description: 'High-quality spares for Chicago Pneumatic air compressors' },
-        { title: 'Ingersoll Rand Replacement Spares', url: '/replacement-spares/ingersoll-rand.html', description: 'Premium replacement parts for Ingersoll Rand compressors' },
-        { title: 'ELGI Replacement Spares', url: '/replacement-spares/elgi.html', description: 'Authentic ELGI compressor replacement parts' },
-        { title: 'Kirloskar Replacement Spares', url: '/replacement-spares/kirloskar.html', description: 'Quality spares for Kirloskar compressor systems' },
-        { title: 'Kaeser Replacement Spares', url: '/replacement-spares/kaeser.html', description: 'Precision parts for Kaeser compressors' },
-        { title: 'AF (Ateliers François) Replacement Spares', url: '/replacement-spares/af.html', description: 'Replacement parts for AF compressor systems' },
-        { title: 'Reciprocating Compressor', url: '/compressors/reciprocating.html', description: 'Industrial reciprocating air compressors' },
-        { title: 'Screw Compressor', url: '/compressors/screw.html', description: 'Rotary screw air compressors for industrial use' },
-        { title: 'Roto Synthetic Fluid ULTRA', url: '/compressor-oils/roto-ultra.html', description: 'Premium synthetic compressor oil by Atlas Copco' },
-        { title: 'Roto Synthetic Fluid XTEND DUTY', url: '/compressor-oils/roto-xtend-duty.html', description: 'Extended duty synthetic compressor fluid' },
-        { title: 'Roto Inject Fluid NDURANCE', url: '/compressor-oils/roto-ndurance.html', description: 'High-performance injection fluid for compressors' },
-        { title: 'Roto Z Fluid', url: '/compressor-oils/roto-z.html', description: 'Specialized compressor lubricant' },
-        { title: 'Ingersoll Rand Oil', url: '/compressor-oils/ingersoll-rand.html', description: 'Replacement oil for Ingersoll Rand compressors' },
-        { title: 'Rotair Xtra', url: '/compressor-oils/rotair-xtra.html', description: 'Chicago Pneumatic premium compressor oil' },
-        { title: 'Rotair Plus', url: '/compressor-oils/rotair-plus.html', description: 'Enhanced compressor lubricant by Chicago Pneumatic' },
-        { title: 'Rotair', url: '/compressor-oils/rotair.html', description: 'Standard compressor oil for Chicago Pneumatic' },
-        { title: 'Airlube', url: '/compressor-oils/airlube.html', description: 'ELGI compressor lubricant' },
-        { title: 'Airlube Plus', url: '/compressor-oils/airlube-plus.html', description: 'Enhanced ELGI compressor oil' },
-        { title: 'Airlube UT', url: '/compressor-oils/airlube-ut.html', description: 'Ultra-tech ELGI compressor fluid' },
-        { title: 'Compressor Replacement Spare Parts', url: '/spare-parts.html', description: 'Comprehensive range of compressor spare parts' }
+        { title: 'Atlas Copco Replacement Spares', url: 'replacement-spares/atlas-copco.html', description: 'Genuine quality replacement parts for Atlas Copco compressors' },
+        { title: 'Chicago Pneumatic Replacement Spares', url: 'replacement-spares/chicago-pneumatic.html', description: 'High-quality spares for Chicago Pneumatic air compressors' },
+        { title: 'Ingersoll Rand Replacement Spares', url: 'replacement-spares/ingersoll-rand.html', description: 'Premium replacement parts for Ingersoll Rand compressors' },
+        { title: 'ELGI Replacement Spares', url: 'replacement-spares/elgi.html', description: 'Authentic ELGI compressor replacement parts' },
+        { title: 'Kirloskar Replacement Spares', url: 'replacement-spares/kirloskar.html', description: 'Quality spares for Kirloskar compressor systems' },
+        { title: 'Kaeser Replacement Spares', url: 'replacement-spares/kaeser.html', description: 'Precision parts for Kaeser compressors' },
+        { title: 'AF (Ateliers François) Replacement Spares', url: 'replacement-spares/af.html', description: 'Replacement parts for AF compressor systems' },
+        { title: 'Reciprocating Compressor', url: 'compressors/reciprocating.html', description: 'Industrial reciprocating air compressors' },
+        { title: 'Screw Compressor', url: 'compressors/screw.html', description: 'Rotary screw air compressors for industrial use' },
+        { title: 'Roto Synthetic Fluid ULTRA', url: 'compressor-oils/roto-ultra.html', description: 'Premium synthetic compressor oil by Atlas Copco' },
+        { title: 'Roto Synthetic Fluid XTEND DUTY', url: 'compressor-oils/roto-xtend-duty.html', description: 'Extended duty synthetic compressor fluid' },
+        { title: 'Roto Inject Fluid NDURANCE', url: 'compressor-oils/roto-ndurance.html', description: 'High-performance injection fluid for compressors' },
+        { title: 'Roto Z Fluid', url: 'compressor-oils/roto-z.html', description: 'Specialized compressor lubricant' },
+        { title: 'Ingersoll Rand Oil', url: 'compressor-oils/ingersoll-rand.html', description: 'Replacement oil for Ingersoll Rand compressors' },
+        { title: 'Rotair Xtra', url: 'compressor-oils/rotair-xtra.html', description: 'Chicago Pneumatic premium compressor oil' },
+        { title: 'Rotair Plus', url: 'compressor-oils/rotair-plus.html', description: 'Enhanced compressor lubricant by Chicago Pneumatic' },
+        { title: 'Rotair', url: 'compressor-oils/rotair.html', description: 'Standard compressor oil for Chicago Pneumatic' },
+        { title: 'Airlube', url: 'compressor-oils/airlube.html', description: 'ELGI compressor lubricant' },
+        { title: 'Airlube Plus', url: 'compressor-oils/airlube-plus.html', description: 'Enhanced ELGI compressor oil' },
+        { title: 'Airlube UT', url: 'compressor-oils/airlube-ut.html', description: 'Ultra-tech ELGI compressor fluid' },
+        { title: 'Compressor Replacement Spare Parts', url: 'spare-parts.html', description: 'Comprehensive range of compressor spare parts' }
     ],
     pages: [
-        { title: 'Home', url: '/index.html', description: 'Imperial Compressors - Complete Compression Solutions' },
-        { title: 'About Us', url: '/about.html', description: 'Learn about our company and engineering expertise' },
-        { title: 'Products', url: '/products.html', description: 'Browse our complete range of compressors and spares' },
-        { title: 'Services', url: '/services.html', description: 'Comprehensive compressor services and maintenance' },
-        { title: 'Quality', url: '/quality.html', description: 'Our commitment to quality and certifications' },
-        { title: 'Contact', url: '/contact.html', description: 'Get in touch with our team' },
-        { title: 'Air Compressor Replacement Spares', url: '/replacement-spares.html', description: 'Brand-wise replacement spares for all major compressor brands' },
-        { title: 'Compressors', url: '/compressors.html', description: 'Industrial air compressors - reciprocating and screw types' },
-        { title: 'Compressor Oils', url: '/compressor-oils.html', description: 'Premium compressor oils and lubricants' }
+        { title: 'Home', url: 'index.html', description: 'Imperial Compressors - Complete Compression Solutions' },
+        { title: 'About Us', url: 'about.html', description: 'Learn about our company and engineering expertise' },
+        { title: 'Products', url: 'products.html', description: 'Browse our complete range of compressors and spares' },
+        { title: 'Services', url: 'services.html', description: 'Comprehensive compressor services and maintenance' },
+        { title: 'Quality', url: 'quality.html', description: 'Our commitment to quality and certifications' },
+        { title: 'Contact', url: 'contact.html', description: 'Get in touch with our team' },
+        { title: 'Air Compressor Replacement Spares', url: 'spare-parts.html', description: 'Brand-wise replacement spares for all major compressor brands' },
+        { title: 'Compressors', url: 'compressors.html', description: 'Industrial air compressors - reciprocating and screw types' },
+        { title: 'Compressor Oils', url: 'compressor-oils.html', description: 'Premium compressor oils and lubricants' }
     ]
 };
 
@@ -100,6 +100,7 @@ searchInput.addEventListener('input', (e) => {
 
 function displaySearchResults(products, pages, query) {
     let html = '';
+    const prefix = getPathPrefix();
 
     if (products.length === 0 && pages.length === 0) {
         html = `
@@ -117,7 +118,7 @@ function displaySearchResults(products, pages, query) {
             html += '<div class="search-category-title">Products</div>';
             products.slice(0, 5).forEach(item => {
                 html += `
-                    <a href="${item.url}" class="search-result-item">
+                    <a href="${prefix}${item.url}" class="search-result-item">
                         <div class="search-result-title">${highlightText(item.title, query)}</div>
                         <div class="search-result-description">${highlightText(item.description, query)}</div>
                     </a>
@@ -131,7 +132,7 @@ function displaySearchResults(products, pages, query) {
             html += '<div class="search-category-title">Pages</div>';
             pages.slice(0, 5).forEach(item => {
                 html += `
-                    <a href="${item.url}" class="search-result-item">
+                    <a href="${prefix}${item.url}" class="search-result-item">
                         <div class="search-result-title">${highlightText(item.title, query)}</div>
                         <div class="search-result-description">${highlightText(item.description, query)}</div>
                     </a>
@@ -142,6 +143,15 @@ function displaySearchResults(products, pages, query) {
     }
 
     searchResults.innerHTML = html;
+}
+
+function getPathPrefix() {
+    const path = window.location.pathname;
+    // Check if the current page is in a subdirectory (compressor-oils)
+    if (path.includes('/compressor-oils/') || path.includes('\\compressor-oils\\')) {
+        return '../';
+    }
+    return './';
 }
 
 function highlightText(text, query) {

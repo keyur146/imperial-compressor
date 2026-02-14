@@ -8,7 +8,9 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
      <!-- ================= PRIMARY SEO ================= -->
-     <title>Screw Compressor | Imperial Compressors</title>
+     <title>Compressor Oils & Lubricants | Imperial Compressors</title>
+     <meta name="description"
+          content="Premium replacement lubricants for Atlas Copco, Ingersoll Rand, Chicago Pneumatic, and ELGi compressors.">
 
      <!-- ================= FAVICON ================= -->
      <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/logo/favicon.svg">
@@ -27,6 +29,29 @@
      <link rel="stylesheet" href="./assets/css/aos.css">
      <link rel="stylesheet" href="./assets/css/styles.css">
      <link rel="stylesheet" href="./assets/css/products.css">
+     <style>
+          .category-header {
+               background: var(--neutral-100);
+               padding: 2rem;
+               border-left: 5px solid var(--primary-600);
+               margin-bottom: 3rem;
+               border-radius: 0 10px 10px 0;
+          }
+
+          .category-header h3 {
+               margin-bottom: 0.5rem;
+               color: var(--primary-800);
+          }
+
+          .category-header p {
+               margin-bottom: 0;
+               color: var(--neutral-600);
+          }
+
+          .oil-grid {
+               margin-bottom: 5rem;
+          }
+     </style>
 </head>
 
 <body>
@@ -81,7 +106,8 @@
                                                   <li><a href="./replacement-spares/atlas-copco.html">Atlas Copco</a>
                                                   </li>
                                                   <li><a href="./replacement-spares/chicago-pneumatic.html">Chicago
-                                                            Pneumatics</a></li>
+                                                            Pneumatics</a>
+                                                  </li>
                                                   <li><a href="./replacement-spares/ingersoll-rand.html">Ingersoll
                                                             Rand</a></li>
                                                   <li><a href="./replacement-spares/elgi.html">ELGI</a></li>
@@ -106,9 +132,8 @@
                                                   <li><a href="./screw-compressor.html">Screw Compressor</a></li>
                                              </ul>
                                         </li>
-                                        <!-- Compressor Oils -->
                                         <li class="has-subdropdown">
-                                             <a href="./compressor-oils.html">
+                                             <a href="./compressor-oils.html" class="active">
                                                   Compressor Oils
                                                   <svg class="dropdown-arrow" fill="none" stroke="currentColor"
                                                        viewBox="0 0 24 24">
@@ -170,15 +195,35 @@
           </nav>
      </div>
 
+     <div class="mobile-overlay" id="mobileOverlay"></div>
+
+     <!-- Search Modal -->
+     <div class="search-modal" id="searchModal">
+          <div class="search-modal-content">
+               <div class="search-modal-header">
+                    <h3>Search</h3>
+                    <button class="search-close-btn" id="searchCloseBtn" aria-label="Close search">×</button>
+               </div>
+               <div class="search-input-wrapper">
+                    <svg class="search-input-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    <input type="text" class="search-input" id="searchInput" placeholder="Search products or pages..."
+                         autocomplete="off">
+               </div>
+               <div class="search-results" id="searchResults"></div>
+          </div>
+     </div>
+
      <!-- Hero Section -->
-     <section class="about-hero compressor">
+     <section class="about-hero compressor-oil">
           <div class="about-hero-overlay"></div>
           <div class="container">
                <div class="about-hero-content" data-aos="fade-up">
-                    <h2 class="about-hero-title">Screw Compressors</h2>
+                    <h2 class="about-hero-title">Compressor Oils & Lubricants</h2>
                     <p class="about-hero-subtitle">
-                         Oil-injected screw technology delivering smooth, vibration-free compressed air with exceptional
-                         energy efficiency.
+                         High-performance alternative lubricants for all major compressor brands.
                     </p>
                </div>
           </div>
@@ -190,190 +235,118 @@
                <ol class="breadcrumb-list">
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./products.html">Products</a></li>
-                    <li><a href="./compressors.html">Compressors</a></li>
-                    <li aria-current="page">Screw Compressor</li>
+                    <li aria-current="page">Compressor Oils</li>
                </ol>
           </div>
      </nav>
 
-     <!-- Product Detail Section -->
-     <section class="productpage-section">
-          <div class="productpage-container">
-               <div class="compressor-row reverse">
-                    <div class="compressor-image" data-aos="fade-up">
-                         <img src="./assets/images/screw-comp.jpg" alt="Screw Compressor">
+     <!-- Content Section -->
+     <section class="lubricant-section">
+          <div class="wrapper">
+
+               <div class="section-header" data-aos="fade-up">
+                    <div class="section-label">Premium replacement oils</div>
+                    <h2 class="section-title">Equivalent Compressor Lubricants</h2>
+               </div>
+
+               <!-- Atlas Copco -->
+               <div class="brand-header" data-aos="fade-up">
+                    <h3>Atlas Copco Equivalent Lubricants</h3>
+                    <p>Premium replacement fluids for rotary screw and tooth compressors.</p>
+               </div>
+
+               <div class="lubricant-grid">
+                    <div class="lubricant-card" data-aos="fade-up">
+                         <h4>Roto Synthetic Fluid ULTRA</h4>
+                         <p>Long-life PAO synthetic lubricant for demanding applications.</p>
+                         <a href="./compressor-oils/roto-ultra.html" class="outline-btn">View Details</a>
                     </div>
-                    <div class="compressor-content" data-aos="fade-up">
-                         <p class="section-label">Continuous Industrial Air Supply</p>
-                         <h2 class="compressor-title">Superior Efficiency & Performance</h2>
-                         <p>
-                              Rotary screw compressors provide continuous, pulsation-free airflow using twin-screw rotor
-                              technology—ideal for 24/7 manufacturing operations requiring reliable compressed air with
-                              low total cost of ownership.
-                         </p>
-                         <div class="compressor-specs">
-                              <span><strong>Capacity:</strong> 100-3000+ CFM</span>
-                              <span><strong>Power:</strong> 10-500 HP</span>
-                              <span><strong>Pressure:</strong> 7, 10, 13 bar</span>
-                         </div>
-                         <div class="hero-buttons" style="margin-top: 2rem;">
-                              <a href="#quote" class="btn btn-primary">Get Custom Quotation</a>
-                         </div>
+
+                    <div class="lubricant-card" data-aos="fade-up" data-aos-delay="100">
+                         <h4>Roto Synthetic Fluid XTEND DUTY</h4>
+                         <p>High-performance replacement for screw compressors.</p>
+                         <a href="./compressor-oils/roto-xtend-duty.html" class="outline-btn">View Details</a>
+                    </div>
+
+                    <div class="lubricant-card" data-aos="fade-up" data-aos-delay="200">
+                         <h4>Roto Inject Fluid NDURANCE</h4>
+                         <p>Quality mineral oil for standard duty screw compressors.</p>
+                         <a href="./compressor-oils/roto-ndurance.html" class="outline-btn">View Details</a>
+                    </div>
+
+                    <div class="lubricant-card" data-aos="fade-up" data-aos-delay="300">
+                         <h4>Roto Z Fluid</h4>
+                         <p>Specialized lubricant for oil-free tooth compressors.</p>
+                         <a href="./compressor-oils/roto-z.html" class="outline-btn">View Details</a>
                     </div>
                </div>
 
-               <div class="container">
-                    <div class="why-imperial-grid" style="margin-top: 4rem;">
-                         <div class="why-item" data-aos="fade-up">
-                              <h3>How It Works</h3>
-                              <p>
-                                   Twin intermeshing helical rotors compress air continuously as they rotate, delivering
-                                   smooth airflow without pulsation—resulting in minimal vibration, compact design, and
-                                   lower
-                                   maintenance than reciprocating units.
-                              </p>
-                              <ul class="feature-list" style="margin-top: 1rem;">
-                                   <li>Precision-machined rotors with optimized profiles</li>
-                                   <li>Integrated oil separation (<3 ppm carryover)</li>
-                                   <li>High-efficiency coolers for optimal temperatures</li>
-                              </ul>
-                         </div>
-                         <div class="why-item" data-aos="fade-up" data-aos-delay="100">
-                              <h3>Performance Benefits</h3>
-                              <ul class="feature-list">
-                                   <li>Designed for 24/7 continuous operation</li>
-                                   <li>Superior energy efficiency (kW per CFM)</li>
-                                   <li>Minimal vibration and quiet operation</li>
-                                   <li>Reduced maintenance vs. reciprocating units</li>
-                                   <li>Compact footprint with high output</li>
-                              </ul>
-                         </div>
+               <!-- Ingersoll Rand -->
+               <div class="brand-header" data-aos="fade-up">
+                    <h3>Ingersoll Rand Equivalent Lubricants</h3>
+                    <p>High-performance polyglycol coolants for IR rotary screw compressors.</p>
+               </div>
+
+               <div class="lubricant-grid">
+                    <div class="lubricant-card" data-aos="fade-up">
+                         <h4>Ingersoll Rand Ultra Coolant</h4>
+                         <p>Premium varnish-free polyglycol synthetic coolant.</p>
+                         <a href="./compressor-oils/ingersoll-rand.html" class="outline-btn">View Details</a>
                     </div>
                </div>
 
-               <div class="comparison-section">
-                    <h3 class="comparison-title" data-aos="fade-up">Technical Specifications</h3>
-                    <div class="comparison-table-wrapper" data-aos="fade-up">
-                         <table class="comparison-table">
-                              <tbody>
-                                   <tr>
-                                        <th>Capacity</th>
-                                        <td>100-3000+ CFM</td>
-                                   </tr>
-                                   <tr>
-                                        <th>Power</th>
-                                        <td>10-500 HP</td>
-                                   </tr>
-                                   <tr>
-                                        <th>Pressure</th>
-                                        <td>7, 10, 13 bar (102-189 PSI)</td>
-                                   </tr>
-                                   <tr>
-                                        <th>Drive</th>
-                                        <td>Direct or belt drive</td>
-                                   </tr>
-                                   <tr>
-                                        <th>Cooling</th>
-                                        <td>Air or water-cooled</td>
-                                   </tr>
-                                   <tr>
-                                        <th>Motors</th>
-                                        <td>Premium efficiency IE3/IE4</td>
-                                   </tr>
-                                   <tr>
-                                        <th>Noise</th>
-                                        <td>&lt;75 dB(A) with enclosure</td>
-                                   </tr>
-                              </tbody>
-                         </table>
+               <!-- Chicago Pneumatic -->
+               <div class="brand-header" data-aos="fade-up">
+                    <h3>Chicago Pneumatic Equivalent Lubricants</h3>
+                    <p>Reliable lubricants for CP screw compressors of all sizes.</p>
+               </div>
+
+               <div class="lubricant-grid">
+                    <div class="lubricant-card" data-aos="fade-up">
+                         <h4>Rotair Xtra</h4>
+                         <p>Enhanced synthetic oil for demanding CP applications.</p>
+                         <a href="./compressor-oils/rotair-xtra.html" class="outline-btn">View Details</a>
+                    </div>
+
+                    <div class="lubricant-card" data-aos="fade-up" data-aos-delay="100">
+                         <h4>Rotair Plus</h4>
+                         <p>Premium mineral lubricant for reliable protection.</p>
+                         <a href="./compressor-oils/rotair-plus.html" class="outline-btn">View Details</a>
+                    </div>
+
+                    <div class="lubricant-card" data-aos="fade-up" data-aos-delay="200">
+                         <h4>Rotair</h4>
+                         <p>Standard mineral oil for small CP compressors.</p>
+                         <a href="./compressor-oils/rotair.html" class="outline-btn">View Details</a>
                     </div>
                </div>
 
-               <div class="container">
-                    <div class="why-imperial-grid" style="margin-top: 4rem;">
-                         <div class="why-item" data-aos="fade-up">
-                              <h3>Energy Savings</h3>
-                              <p>
-                                   Our screw compressors are engineered for maximum energy efficiency, significantly
-                                   reducing
-                                   operational costs.
-                              </p>
-                              <ul class="feature-list" style="margin-top: 1rem;">
-                                   <li>VSD option: 20-35% savings in variable-demand applications</li>
-                                   <li>Efficient cooling systems reduce parasitic losses</li>
-                                   <li>Heat recovery captures up to 70% of electrical input</li>
-                              </ul>
-                         </div>
-                         <div class="why-item" data-aos="fade-up" data-aos-delay="100">
-                              <h3>Control Options</h3>
-                              <ul class="feature-list">
-                                   <li><strong>Modulation:</strong> Inlet valve adjustment</li>
-                                   <li><strong>Load/Unload:</strong> On/off cycling</li>
-                                   <li><strong>Variable Speed Drive (VSD):</strong> 20-35% energy savings</li>
-                                   <li><strong>Multi-compressor sequencing</strong> for optimization</li>
-                              </ul>
-                         </div>
+               <!-- ELGi -->
+               <div class="brand-header" data-aos="fade-up">
+                    <h3>ELGi Equivalent Lubricants</h3>
+                    <p>Specialized fluids for ELGi EG, EQ, and EN series compressors.</p>
+               </div>
+
+               <div class="lubricant-grid">
+                    <div class="lubricant-card" data-aos="fade-up">
+                         <h4>Airlube</h4>
+                         <p>Mineral oil for standard performance in ELGi units.</p>
+                         <a href="./compressor-oils/airlube.html" class="outline-btn">View Details</a>
                     </div>
 
-                    <div class="why-imperial-grid" style="margin-top: 4rem;">
-                         <div class="why-item" data-aos="fade-up">
-                              <h3>Configurations</h3>
-                              <ul class="feature-list">
-                                   <li><strong>Air-Cooled:</strong> Simplest installation, no external cooling</li>
-                                   <li><strong>Water-Cooled:</strong> Efficient for hot environments</li>
-                                   <li><strong>Tank-Mounted:</strong> Integrated storage</li>
-                                   <li><strong>Dryer-Integrated:</strong> Ready-to-use compressed air</li>
-                              </ul>
-                         </div>
-                         <div class="why-item" data-aos="fade-up" data-aos-delay="100">
-                              <h3>Applications</h3>
-                              <ul class="feature-list">
-                                   <li>Pharmaceutical manufacturing</li>
-                                   <li>Food & beverage processing</li>
-                                   <li>Automotive manufacturing</li>
-                                   <li>Textile mills</li>
-                                   <li>CNC machining shops</li>
-                                   <li>Printing & packaging</li>
-                              </ul>
-                         </div>
+                    <div class="lubricant-card" data-aos="fade-up" data-aos-delay="100">
+                         <h4>Airlube Plus</h4>
+                         <p>Improved mineral lubricant with extended drain intervals.</p>
+                         <a href="./compressor-oils/airlube-plus.html" class="outline-btn">View Details</a>
+                    </div>
+
+                    <div class="lubricant-card" data-aos="fade-up" data-aos-delay="200">
+                         <h4>Airlube UT</h4>
+                         <p>Premium PAO synthetic oil for heavy-duty ELGi performance.</p>
+                         <a href="./compressor-oils/airlube-ut.html" class="outline-btn">View Details</a>
                     </div>
                </div>
 
-               <div class="comparison-section">
-                    <h3 class="comparison-title" data-aos="fade-up">Maintenance Schedule</h3>
-                    <div class="comparison-table-wrapper" data-aos="fade-up">
-                         <table class="comparison-table">
-                              <thead>
-                                   <tr>
-                                        <th>Interval</th>
-                                        <th>Task</th>
-                                   </tr>
-                              </thead>
-                              <tbody>
-                                   <tr>
-                                        <td>Every 500 hrs</td>
-                                        <td>Oil level, condensate drains</td>
-                                   </tr>
-                                   <tr>
-                                        <td>Every 2000 hrs</td>
-                                        <td>Replace air filter</td>
-                                   </tr>
-                                   <tr>
-                                        <td>Every 4000 hrs</td>
-                                        <td>Replace oil filter</td>
-                                   </tr>
-                                   <tr>
-                                        <td>Every 4000-8000 hrs</td>
-                                        <td>Change oil</td>
-                                   </tr>
-                                   <tr>
-                                        <td>Annual</td>
-                                        <td>Comprehensive inspection</td>
-                                   </tr>
-                              </tbody>
-                         </table>
-                    </div>
-               </div>
           </div>
      </section>
 
@@ -444,6 +417,7 @@
 
      <script src="./assets/js/aos.js"></script>
      <script src="./assets/js/script.js"></script>
+     <script src="./assets/js/search.js"></script>
      <script>
           AOS.init({ duration: 1000, once: true });
           document.getElementById('year').textContent = new Date().getFullYear();

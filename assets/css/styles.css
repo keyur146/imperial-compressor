@@ -816,12 +816,12 @@ body.menu-open {
     }
 
     .dropdown-menu a {
-        padding: 12px 30px 12px 50px;
+        padding: 12px 30px 12px 40px;
         font-size: 14px;
     }
 
     .dropdown-menu a:hover {
-        padding-left: 55px;
+        padding-left: 40px;
     }
 
     /* Mobile Subdropdown */
@@ -840,7 +840,10 @@ body.menu-open {
     }
 
     .dropdown-menu li.active>.subdropdown-menu {
-        max-height: 500px;
+        max-height: fit-content;
+        padding: 10px 0;
+        border-top: 1px solid var(--color-gray-300);
+        border-bottom: 1px solid var(--color-gray-300);
     }
 
     .subdropdown-menu a {
@@ -862,6 +865,13 @@ body.menu-open {
 
     .dropdown-menu li.active>a .dropdown-arrow {
         transform: rotate(180deg);
+    }
+}
+
+@media(max-width: 576px) {
+    .logo img {
+        height: 48px;
+        width: auto;
     }
 }
 
@@ -1015,7 +1025,7 @@ body.menu-open {
     overflow: hidden;
 }
 
-.about .bg-img {
+/* .about .bg-img {
     position: absolute;
     right: 0;
     top: 50%;
@@ -1030,7 +1040,7 @@ body.menu-open {
     opacity: 1;
     pointer-events: none;
     z-index: 0;
-}
+} */
 
 .about .container {
     position: relative;
@@ -1724,6 +1734,18 @@ body.menu-open {
     font-size: 0.9rem;
 }
 
+@media (max-width: 992px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* ========== INDUSTRIES ========== */
 /* .industries-grid {
     display: grid;
@@ -1772,24 +1794,6 @@ body.menu-open {
     color: var(--color-gray-300);
     font-size: 0.95rem;
     margin-bottom: 0;
-}
-
-@media (max-width: 992px) {
-    .industries-grid,
-    .features-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 576px) {
-    .industries-grid,
-    .features-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .industry-card {
-        padding: var(--spacing-xs);
-    }
 } */
 
 /* ================= INDUSTRIES WE SERVE SECTION ================= */
@@ -2082,6 +2086,7 @@ body.menu-open {
     padding: 0.5rem;
     border: 2px dashed var(--color-gray-200);
     cursor: pointer;
+    width: 90%;
 }
 
 .form-group input[type="file"]:hover {
@@ -2165,10 +2170,15 @@ select.error option {
     font-style: italic;
 }
 
-@media(max-width: 576px) {
+@media(max-width: 768px) {
     .quote-grid {
         grid-template-columns: 1fr;
-        gap: var(--spacing-md);
+    }
+}
+
+@media(max-width: 576px) {
+    .quote-grid {
+        gap: var(--spacing-sm);
     }
 
     .quote-content {
@@ -2182,6 +2192,18 @@ select.error option {
     .form-row {
         grid-template-columns: 1fr;
         gap: 1rem;
+    }
+
+    .quote-label {
+        font-size: 1rem;
+    }
+
+    .quote-title {
+        font-size: 1.875rem;
+    }
+
+    .quote-description {
+        font-size: 0.875rem;
     }
 }
 
@@ -2425,6 +2447,34 @@ select.error option {
     right: 0;
     bottom: 0;
     background-image: url('../images/compressor-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    opacity: 0.2;
+}
+
+.about-hero.compressor-oil::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/compressor-oil-bg.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    opacity: 0.2;
+}
+
+.about-hero.compressor-spare::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/products/compressor-spare.png');
     background-size: cover;
     background-position: center;
     z-index: 0;
