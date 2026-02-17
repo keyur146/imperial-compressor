@@ -249,14 +249,22 @@ p {
     font-size: 0.875rem;
 }
 
-.top-bar-content {
+.top-bar-content,
+.contact-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100% ;
+}
+
+.contact-no {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
 }
 
 .contact-info a {
-    margin-right: 1.5rem;
+    /* margin-right: 1.5rem; */
     color: var(--color-gray-300);
 }
 
@@ -2390,7 +2398,7 @@ select.error option {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('../images/slide-1.jpg');
+    background-image: url('../images/about-bg.jpg');
     background-size: cover;
     background-position: center;
     z-index: 0;
@@ -2447,6 +2455,34 @@ select.error option {
     right: 0;
     bottom: 0;
     background-image: url('../images/compressor-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    opacity: 0.2;
+}
+
+.about-hero.products-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/products-bg.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    opacity: 0.2;
+}
+
+.about-hero.compressor-oil-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/commressor-oil-page-bg.jpeg');
     background-size: cover;
     background-position: center;
     z-index: 0;

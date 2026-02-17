@@ -161,15 +161,15 @@
 }
 
 .why-imperial-flex {
-    display: flex;
-    justify-content: space-evenly;
-    gap: 3rem 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
     border-top: 1px solid rgba(0, 0, 0, 0.08);
     padding-top: 3rem;
-    flex-wrap: wrap;
 }
 
 /* Items */
+
 .why-item h3 {
     font-size: 1.35rem;
     color: var(--color-navy);
@@ -312,6 +312,7 @@
     font-size: 0.95rem;
     color: var(--color-gray-800);
     line-height: 1.6;
+    margin-bottom: 10px;
 }
 
 .compressor-content .compressor-title {

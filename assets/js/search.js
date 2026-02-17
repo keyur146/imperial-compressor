@@ -28,7 +28,7 @@ const searchData = {
         { title: 'Airlube', url: 'compressor-oils/airlube.html', description: 'ELGI compressor lubricant' },
         { title: 'Airlube Plus', url: 'compressor-oils/airlube-plus.html', description: 'Enhanced ELGI compressor oil' },
         { title: 'Airlube UT', url: 'compressor-oils/airlube-ut.html', description: 'Ultra-tech ELGI compressor fluid' },
-        { title: 'Compressor Replacement Spare Parts', url: 'spare-parts.html', description: 'Comprehensive range of compressor spare parts' }
+        { title: 'Product Categories', url: 'spare-parts.html', description: 'Comprehensive range of compressor spare parts' }
     ],
     pages: [
         { title: 'Home', url: 'index.html', description: 'Imperial Compressors - Complete Compression Solutions' },
@@ -37,7 +37,7 @@ const searchData = {
         { title: 'Services', url: 'services.html', description: 'Comprehensive compressor services and maintenance' },
         { title: 'Quality', url: 'quality.html', description: 'Our commitment to quality and certifications' },
         { title: 'Contact', url: 'contact.html', description: 'Get in touch with our team' },
-        { title: 'Air Compressor Replacement Spares', url: 'spare-parts.html', description: 'Brand-wise replacement spares for all major compressor brands' },
+        { title: 'Replacement Spare Parts', url: 'spare-parts.html', description: 'Brand-wise replacement spares for all major compressor brands' },
         { title: 'Compressors', url: 'compressors.html', description: 'Industrial air compressors - reciprocating and screw types' },
         { title: 'Compressor Oils', url: 'compressor-oils.html', description: 'Premium compressor oils and lubricants' }
     ]

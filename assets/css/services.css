@@ -120,14 +120,14 @@
 }
 
 .emergency-header h3 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     color: var(--color-white);
     margin-bottom: var(--spacing-xs);
     font-weight: 600;
 }
 
 .emergency-header p {
-    font-size: 1.1rem;
+    font-size: 0.875rem;
     color: var(--color-white);
     opacity: 0.75;
 }
@@ -135,7 +135,7 @@
 .emergency-details {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-md);
+    gap: var(--spacing-sm);
     margin-bottom: 5px;
 }
 
