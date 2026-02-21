@@ -63,8 +63,7 @@ $(function () {
 
     if ($("#contact-form").valid() == true) {
       
-      // Serialize the form data.
-      var formData = $(form).serialize();
+      // Build form data (FormData supports file uploads).
       var formData = new FormData(form[0]);
       // alert("Hello");
 
@@ -81,26 +80,17 @@ $(function () {
           $(form)[0].reset();
           // response = $.parseJSON(response);
 
-          // Make sure that the formMessages div has the 'success' class.
-          if (response == "Thank You! Your message has been sent.") {
-            $(formMessages).removeClass("error");
-            $(formMessages).addClass("success");
+          // PHP echoes a plain string, not JSON — use response directly.
+          $(formMessages).removeClass("error");
+          $(formMessages).addClass("success");
 
-            // Set the message text.
-            $(formMessages).text(response.msg);
+          // Set the message text.
+          $(formMessages).text(response);
 
-            $(formMessages).fadeIn();
-            // Clear the form.
-            // $("#contact-form input,#contact-form textarea").val("");
-            
-            $(form).slideup();
-          } else {
-            $(formMessages).removeClass("success");
-            $(formMessages).addClass("error");
-            $(formMessages).text(response.msg);
+          $(formMessages).fadeIn();
 
-            $(formMessages).fadeIn();
-          }
+          // Hide the form on success.
+          $(form).slideUp();
         })
         .fail(function (data) {
          

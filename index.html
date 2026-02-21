@@ -781,7 +781,8 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <span id="year"></span> Imperial Compressors Pvt. Ltd. All rights reserved. | <a href="./sitemap.html">Sitemap</a></p>
+                <p>&copy; <span id="year"></span> Imperial Compressors Pvt. Ltd. All rights reserved. | <a
+                        href="./sitemap.html">Sitemap</a></p>
             </div>
         </div>
     </footer>
@@ -792,11 +793,48 @@
     <script src="./assets/js/jquery.min.js"></script>
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/validation.js"></script>
+    <script src="./assets/js/quote-validation.js"></script>
     <script src="./assets/js/search.js"></script>
     <script src="./assets/js/script.js"></script>
     <script>
         const d = new Date();
         document.getElementById('year').textContent = d.getFullYear()
+
+        // Hero Slider Functionality
+        const slides = document.querySelectorAll('.hero-slide');
+        const dots = document.querySelectorAll('.hero-dot');
+        let currentSlide = 0;
+        const slideInterval = 5000; // 5 seconds
+
+        function showSlide(index) {
+            // Remove active class from all slides and dots
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            // Add active class to current slide and dot
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Auto-advance slides
+        let autoSlide = setInterval(nextSlide, slideInterval);
+
+        // Dot navigation
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                showSlide(currentSlide);
+
+                // Reset auto-advance timer
+                clearInterval(autoSlide);
+                autoSlide = setInterval(nextSlide, slideInterval);
+            });
+        });
     </script>
 </body>
 

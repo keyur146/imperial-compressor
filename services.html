@@ -576,7 +576,8 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <span id="year"></span> Imperial Compressors Pvt. Ltd. All rights reserved. | <a href="./sitemap.html">Sitemap</a></p>
+                <p>&copy; <span id="year"></span> Imperial Compressors Pvt. Ltd. All rights reserved. | <a
+                        href="./sitemap.html">Sitemap</a></p>
             </div>
         </div>
     </footer>
@@ -592,6 +593,43 @@
     <script>
         const d = new Date();
         document.getElementById('year').textContent = d.getFullYear()
+
+        // Accordian js
+
+        const accordionItems = document.querySelectorAll('.why-accordion-item');
+
+        accordionItems.forEach(item => {
+            const header = item.querySelector('.why-accordion-header');
+            const body = item.querySelector('.why-accordion-body');
+
+            header.addEventListener('click', () => {
+
+                // Close others
+                accordionItems.forEach(i => {
+                    if (i !== item) {
+                        i.classList.remove('active');
+                        i.querySelector('.why-accordion-body').style.maxHeight = null;
+                    }
+                });
+
+                item.classList.toggle('active');
+
+                if (item.classList.contains('active')) {
+                    body.style.maxHeight = body.scrollHeight + 'px';
+                } else {
+                    body.style.maxHeight = null;
+                }
+            });
+        });
+
+        // 🔥 AUTO OPEN FIRST ITEM
+        if (accordionItems.length) {
+            const firstItem = accordionItems[0];
+            const firstBody = firstItem.querySelector('.why-accordion-body');
+
+            firstItem.classList.add('active');
+            firstBody.style.maxHeight = firstBody.scrollHeight + 'px';
+        }
     </script>
 </body>
 
