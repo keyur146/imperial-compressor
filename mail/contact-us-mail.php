@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Set the recipient email address.
-    $recipient = "farithiplywood@gmail.com";
+    $recipient = "keyurbchauhan@gmail.com";
 
     // Build the email content.
     $email_content = "Name: $con_name\n";

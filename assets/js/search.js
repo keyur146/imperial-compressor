@@ -8,15 +8,9 @@ const searchResults = document.getElementById('searchResults');
 // Search data - products and pages
 const searchData = {
     products: [
-        { title: 'Atlas Copco Replacement Spares', url: 'replacement-spares/atlas-copco.html', description: 'Genuine quality replacement parts for Atlas Copco compressors' },
-        { title: 'Chicago Pneumatic Replacement Spares', url: 'replacement-spares/chicago-pneumatic.html', description: 'High-quality spares for Chicago Pneumatic air compressors' },
-        { title: 'Ingersoll Rand Replacement Spares', url: 'replacement-spares/ingersoll-rand.html', description: 'Premium replacement parts for Ingersoll Rand compressors' },
-        { title: 'ELGI Replacement Spares', url: 'replacement-spares/elgi.html', description: 'Authentic ELGI compressor replacement parts' },
-        { title: 'Kirloskar Replacement Spares', url: 'replacement-spares/kirloskar.html', description: 'Quality spares for Kirloskar compressor systems' },
-        { title: 'Kaeser Replacement Spares', url: 'replacement-spares/kaeser.html', description: 'Precision parts for Kaeser compressors' },
-        { title: 'AF (Ateliers François) Replacement Spares', url: 'replacement-spares/af.html', description: 'Replacement parts for AF compressor systems' },
-        { title: 'Reciprocating Compressor', url: 'compressors/reciprocating.html', description: 'Industrial reciprocating air compressors' },
-        { title: 'Screw Compressor', url: 'compressors/screw.html', description: 'Rotary screw air compressors for industrial use' },
+        { title: 'Replacement Spare Parts (Brand-wise)', url: 'replacement-spares.html', description: 'OEM-equivalent spares for Atlas Copco, Ingersoll Rand, Chicago Pneumatic, ELGI, Kirloskar, Kaeser, AF compressors' },
+        { title: 'Reciprocating Compressor', url: 'reciprocating-compressor.html', description: 'Industrial reciprocating air compressors' },
+        { title: 'Screw Compressor', url: 'screw-compressor.html', description: 'Rotary screw air compressors for industrial use' },
         { title: 'Roto Synthetic Fluid ULTRA', url: 'compressor-oils/roto-ultra.html', description: 'Premium synthetic compressor oil by Atlas Copco' },
         { title: 'Roto Synthetic Fluid XTEND DUTY', url: 'compressor-oils/roto-xtend-duty.html', description: 'Extended duty synthetic compressor fluid' },
         { title: 'Roto Inject Fluid NDURANCE', url: 'compressor-oils/roto-ndurance.html', description: 'High-performance injection fluid for compressors' },
@@ -39,7 +33,8 @@ const searchData = {
         { title: 'Contact', url: 'contact.html', description: 'Get in touch with our team' },
         { title: 'Replacement Spare Parts', url: 'spare-parts.html', description: 'Brand-wise replacement spares for all major compressor brands' },
         { title: 'Compressors', url: 'compressors.html', description: 'Industrial air compressors - reciprocating and screw types' },
-        { title: 'Compressor Oils', url: 'compressor-oils.html', description: 'Premium compressor oils and lubricants' }
+        { title: 'Compressor Oils', url: 'compressor-oils.html', description: 'Premium compressor oils and lubricants' },
+        { title: 'Sitemap', url: 'sitemap.html', description: 'A complete overview of all pages and content on the Imperial Compressors website.' }
     ]
 };
 
