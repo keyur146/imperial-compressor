@@ -6,7 +6,7 @@ $(function () {
   // Get the form.
   var form = $("#contact-form");
   // Get the messages div.
-  var formMessages = $(".contact-us.form-messege");
+  var formMessages = $("#contactFormMessage");
   // Set up an event listener for the contact form.
   // line 12-46 added to validate the form before sending an email
   form.validate({
