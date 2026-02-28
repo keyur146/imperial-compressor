@@ -328,6 +328,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+    margin: var(--spacing-sm) 0;
 }
 
 .compressor-columns h4 {
