@@ -90,7 +90,6 @@ $(function () {
           $(formMessages).fadeIn();
 
           // Hide the form on success.
-          $(form).slideUp();
         })
         .fail(function (data) {
          

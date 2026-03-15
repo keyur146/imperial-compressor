@@ -117,9 +117,6 @@ $(function () {
                 formMessages.removeClass("error").addClass("success");
                 formMessages.text(response);
                 formMessages.fadeIn();
-
-                // Hide the form on success.
-                form.slideUp();
             })
             .fail(function (data) {
                 formMessages.removeClass("success").addClass("error");
