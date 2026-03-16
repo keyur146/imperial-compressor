@@ -82,9 +82,10 @@
     margin-bottom: var(--spacing-sm);
 }
 
-.badge-icon {
-    font-size: 2.5rem;
+.certification-badge i {
+    font-size: 2rem;
     line-height: 1;
+    color: var(--color-primary);
 }
 
 .certification-badge h3 {

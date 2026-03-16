@@ -1,7 +1,8 @@
 <?php
 
 header("Access-Control-Allow-Origin: *");
-
+ini_set("sendmail_from", "info@imperialcompressors.net");
+ini_set("sendmail_path", "/usr/sbin/sendmail -t -i");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $con_name = isset($_POST["con_name"]) ? strip_tags(trim($_POST["con_name"])) : "";
@@ -35,19 +36,44 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // $headers .= "Reply-To: $con_email\r\n";
     // $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
-    $headers = "From: info@imperialcompressors.net\r\n";
-    $headers .= "Reply-To: $con_email\r\n";
-    $headers .= "MIME-Version: 1.0\r\n";
+    // $headers = "From:info@imperialcompressors.net\r\n";
+    // $headers .= "Reply-To: $con_email\r\n";
+    // $headers .= "MIME-Version: 1.0\r\n";
 
-    $mailSent = mail($recipient,$subject,$email_content,$headers);
+    // $headers  = "From: Imperial Compressors <info@imperialcompressors.net>\r\n";
+    // $headers .= "Reply-To: $con_email\r\n";
+    // $headers .= "MIME-Version: 1.0\r\n";
+    // $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
-    if ($mailSent) {
-        http_response_code(200);
-        echo "Thank you! Your message has been sent successfully.";
-    } else {
-        http_response_code(500);
-        echo "Mail server error. Please try again later.";
+    // $mailSent = mail($recipient,$subject,$email_content,$headers);
+
+    // if ($mailSent) {
+    //     http_response_code(200);
+    //     echo "Thank you! Your message has been sent successfully.";
+    //     //print_r($mailSent);
+    // } else {
+    //     http_response_code(500);
+    //     echo "Mail server error. Please try again later.";
+    // }
+
+
+ 
+    $sender = 'hiralchauhan95@gmail.com';
+    $recipient = 'hiralchauhan95@gmail.com';
+
+    $subject = "php mail test";
+    $message = "php test message";
+    $headers = 'From:' . $sender;
+
+    if (mail($recipient, $subject, $message, $headers))
+    {
+        echo "Message accepted";
     }
+    else
+    {
+        echo "Error: Message not accepted";
+    }
+
 
 } else {
 
