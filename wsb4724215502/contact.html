@@ -278,7 +278,7 @@
                 </div>
 
                 <!-- Right Side - Contact Form -->
-                <div class="quote-form-wrapper" data-aos="fade-up">
+                <!-- <div class="quote-form-wrapper" data-aos="fade-up">
                     <form class="quote-form" id="contact-form" action="./mail/contact-us-mail.php">
                         <div class="form-row">
                             <div class="form-group">
@@ -308,6 +308,46 @@
                             </span>
                         </button>
                         <div class="form-message" id="contactFormMessage"></div>
+                    </form>
+                </div> -->
+                <div class="quote-form-wrapper" data-aos="fade-up">
+                    <form class="quote-form" id="quoteForm" enctype="multipart/form-data"
+                        action="./mail/quote-mail.php">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="quote_name">Name *</label>
+                                <input type="text" id="quote_name" name="quote_name">
+                            </div>
+                            <div class="form-group">
+                                <label for="quote_email">Email *</label>
+                                <input type="email" id="quote_email" name="quote_email">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="quote_phone">Phone *</label>
+                                <input type="tel" id="quote_phone" name="quote_phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="quote_subject">Subject *</label>
+                                <input type="text" id="quote_subject" name="quote_subject">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="quote_message">Message *</label>
+                            <textarea id="quote_message" name="quote_message" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="quote_file">Attach File (Optional)</label>
+                            <input type="file" id="quote_file" name="quote_file"
+                                accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
+                            <small class="file-info">Max file size: 5MB. <br> Accepted formats: PDF, DOC, DOCX, JPG,
+                                PNG</small>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            Send Quote Request
+                        </button>
+                        <div class="form-message" id="quoteFormMessage"></div>
                     </form>
                 </div>
             </div>
@@ -457,7 +497,7 @@
     <!-- Footer -->
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/+917926585144?text=Hello%20Imperial%20Compressors%2C%20I%20need%20more%20information."
+    <a href="https://wa.me/+9429131085?text=Hello%20Imperial%20Compressors%2C%20I%20need%20more%20information."
         class="whatsapp-float" target="_blank">
 
         <i class="fa-brands fa-whatsapp"></i>
@@ -468,7 +508,8 @@
     <script src="./assets/js/aos.js"></script>
     <script src="./assets/js/jquery.min.js"></script>
     <script src="./assets/js/plugins.js"></script>
-    <script src="./assets/js/validation.js"></script>
+    <!-- <script src="./assets/js/validation.js"></script> -->
+    <script src="./assets/js/quote-validation.js"></script>
     <script src="./assets/js/search.js"></script>
     <script src="./assets/js/script.js"></script>
     <script>

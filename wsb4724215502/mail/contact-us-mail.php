@@ -1,14 +1,13 @@
 <?php
 
 header("Access-Control-Allow-Origin: *");
-ini_set("sendmail_from", "info@imperialcompressors.net");
-ini_set("sendmail_path", "/usr/sbin/sendmail -t -i");
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $con_name = isset($_POST["con_name"]) ? strip_tags(trim($_POST["con_name"])) : "";
-    $con_contact_no = isset($_POST["con_contact_no"]) ? trim($_POST["con_contact_no"]) : "";
-    $con_email = isset($_POST["con_email"]) ? filter_var(trim($_POST["con_email"]), FILTER_SANITIZE_EMAIL) : "";
-    $con_message = isset($_POST["con_message"]) ? trim($_POST["con_message"]) : "";
+    $con_name = strip_tags(trim($_POST["con_name"] ?? ""));
+    $con_contact_no = trim($_POST["con_contact_no"] ?? "");
+    $con_email = filter_var(trim($_POST["con_email"] ?? ""), FILTER_SANITIZE_EMAIL);
+    $con_message = trim($_POST["con_message"] ?? "");
 
     if (
         empty($con_name) ||
@@ -17,67 +16,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         !filter_var($con_email, FILTER_VALIDATE_EMAIL)
     ) {
         http_response_code(400);
-        echo "Please complete the form and try again.";
+        echo "Please complete the form correctly.";
         exit();
     }
 
-    $recipient = "hiralchauhan95@gmail.com";
+    $to = "info@imperialcompressors.net,hiralchauhan95@gmail.com";
+    $subject = "Contact Us Details";
 
-    $subject = "New Website Inquiry";
+    $message = "Name: $con_name\n";
+    $message .= "Email: $con_email\n";
+    $message .= "Phone: $con_contact_no\n\n";
+    $message .= "Message:\n$con_message\n";
 
-    $email_content =
-        "Name: $con_name\n".
-        "Email: $con_email\n".
-        "Phone: $con_contact_no\n\n".
-        "Message:\n$con_message";
+    $headers = "From: info@imperialcompressors.net\r\n";
+    $headers .= "Reply-To: $con_email\r\n";
+    $headers .= "Return-Path: info@imperialcompressors.net\r\n";
+    $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
+    $headers .= "MIME-Version: 1.0\r\n";
+    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
-    // IMPORTANT HEADERS
-    // $headers  = "From: info@imperialcompressors.net\r\n";
-    // $headers .= "Reply-To: $con_email\r\n";
-    // $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-
-    // $headers = "From:info@imperialcompressors.net\r\n";
-    // $headers .= "Reply-To: $con_email\r\n";
-    // $headers .= "MIME-Version: 1.0\r\n";
-
-    // $headers  = "From: Imperial Compressors <info@imperialcompressors.net>\r\n";
-    // $headers .= "Reply-To: $con_email\r\n";
-    // $headers .= "MIME-Version: 1.0\r\n";
-    // $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-
-    // $mailSent = mail($recipient,$subject,$email_content,$headers);
-
-    // if ($mailSent) {
-    //     http_response_code(200);
-    //     echo "Thank you! Your message has been sent successfully.";
-    //     //print_r($mailSent);
-    // } else {
-    //     http_response_code(500);
-    //     echo "Mail server error. Please try again later.";
-    // }
-
-
- 
-    $sender = 'hiralchauhan95@gmail.com';
-    $recipient = 'hiralchauhan95@gmail.com';
-
-    $subject = "php mail test";
-    $message = "php test message";
-    $headers = 'From:' . $sender;
-
-    if (mail($recipient, $subject, $message, $headers))
-    {
-        echo "Message accepted";
+    if (mail($to, $subject, $message, $headers, "-finfo@imperialcompressors.net")) {
+        http_response_code(200);
+        echo "Thank you! Your quote request has been sent successfully. We'll get back to you within 24 hours.";
+    } else {
+        http_response_code(500);
+        echo "Oops! Something went wrong and we couldn't send your request. Please try again or contact us directly.";
     }
-    else
-    {
-        echo "Error: Message not accepted";
-    }
-
 
 } else {
-
     http_response_code(403);
     echo "Invalid request.";
-
 }
+?>

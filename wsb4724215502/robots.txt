@@ -1,0 +1,36 @@
+User-agent: *
+
+# Allow all main content
+
+Allow: /
+
+# Block sensitive or irrelevant paths
+
+Disallow: /admin/
+Disallow: /private/
+Disallow: /bin/
+Disallow: /config/
+Disallow: /cgi-bin/
+
+# Block specific files (if any)
+
+Disallow: /web.config
+Disallow: /404.html
+
+# Prevent crawling of query parameters (optional)
+
+Disallow: /*?*
+
+# Allow important assets
+
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.webp$
+Allow: /*.svg$
+
+# Sitemap location
+
+Sitemap: https://imperialcompressors.net/sitemap.xml
