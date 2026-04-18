@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // RECEIVER
-    $to = "info@imperialcompressors.net, hiralchauhan95@gmail.com";
+    $to = "info@imperialcompressors.net";
 
     // SUBJECT
     $subject = "Quote Request: " . $quote_subject;

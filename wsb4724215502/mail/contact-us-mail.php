@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 
-    $to = "info@imperialcompressors.net,hiralchauhan95@gmail.com";
+    $to = "info@imperialcompressors.net";
     $subject = "Contact Us Details";
 
     $message = "Name: $con_name\n";
